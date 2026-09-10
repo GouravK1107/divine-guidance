@@ -1,4 +1,4 @@
-# 🕉️ Divine Guidance
+# Divine Guidance
 
 > AI-powered spiritual guidance using **RAG (Retrieval-Augmented Generation)** to provide thoughtful, practical reflections grounded in the teachings of the **Bhagavad Gita**, **Quran**, and **Bible**.
 
