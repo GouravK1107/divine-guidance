@@ -651,3 +651,127 @@ textarea:focus {
     transform: none;
   }
 }
+/* ---------- Guidance Notification ---------- */
+
+.guidance-notification {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+
+  width: min(360px, calc(100vw - 36px));
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 15px 16px;
+
+  background: rgba(19, 21, 25, 0.96);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(205, 168, 106, 0.04) inset;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  opacity: 0;
+  transform: translateY(18px) scale(0.97);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s var(--ease),
+    transform 0.4s var(--ease);
+}
+
+.guidance-notification.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.notification-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-dim);
+
+  color: var(--accent-bright);
+  font-size: 1rem;
+
+  box-shadow:
+    0 0 18px rgba(205, 168, 106, 0.12);
+}
+
+.notification-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.notification-title {
+  color: var(--text);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  margin-bottom: 2px;
+}
+
+.notification-message {
+  color: var(--text-dim);
+
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.notification-close {
+  flex-shrink: 0;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+
+  color: var(--text-faint);
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+  border-radius: 50%;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.notification-close:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 640px) {
+  .guidance-notification {
+    right: 18px;
+    bottom: 18px;
+
+    width: calc(100vw - 36px);
+  }
+}
