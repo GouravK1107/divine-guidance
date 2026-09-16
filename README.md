@@ -18,6 +18,7 @@ The goal is to bridge timeless spiritual wisdom with modern AI, offering guidanc
 - 📚 Draws from three major spiritual texts — Bhagavad Gita, Quran, and Bible
 - 🔍 Retrieval-Augmented Generation (RAG) pipeline for context-accurate responses
 - 🧠 LLM-powered reflection generation on top of retrieved passages
+- 🔔 In-app and browser notifications when guidance is ready
 - 🌐 Simple, clean web interface built with Django templates
 - ⚡ Modular Django app structure for easy extension (more texts/traditions can be added)
 
